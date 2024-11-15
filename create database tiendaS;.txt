@@ -1,0 +1,39 @@
+create database tiendaS;
+use tiendaS;
+
+CREATE TABLE productos (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL
+);
+
+INSERT INTO productos (nombre, precio, stock) VALUES
+('Manzanas', 0.50, 100),
+('Pan', 1.00, 50),
+('Leche', 0.80, 75),
+('Huevos', 2.50, 200),
+ ('Arroz', 1.20, 150),
+ ('Azúcar', 0.90, 80),
+ ('Café', 3.00, 60),
+ ('Aceite de Oliva', 5.00, 40),
+ ('Pasta', 1.50, 100),
+ ('Sal', 0.40, 300),
+ ('Harina', 0.70, 120),
+ ('Tomates', 0.60, 90),
+ ('Queso', 2.80, 50),
+ ('Jamón', 3.50, 45),
+ ('Yogur', 0.80, 70),
+ ('Cereal', 2.20, 85),
+ ('Mantequilla', 1.80, 65),
+ ('Chocolate', 1.50, 75),
+ ('Galletas', 1.00, 110),
+ ('Refresco', 1.20, 130),
+ ('Agua Mineral', 0.80, 200);
+ CREATE TABLE administradores (
+    id_admin INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL UNIQUE,
+    contrasena VARCHAR(100) NOT NULL
+);																					
+INSERT INTO administradores (usuario, contrasena) VALUES
+('admin', 'admin123');
